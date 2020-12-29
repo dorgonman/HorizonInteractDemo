@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>HorizonInteractDemo</id>
+    <version>0.0.0.1</version>
+    <authors>dorgon.chang</authors>
+    <owners>dorgon.chang</owners>
+    <projectUrl>https://github.com/dorgonman/HorizonDialogueDemo</projectUrl>
+    <iconUrl>https://i.imgur.com/8dfwtEQ.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>HorizonDialogue Plugin Demo Project Editor dll, no source code, only for Win64 and mac editor</description>
+    <releaseNotes>https://github.com/dorgonman/HorizonInteractDemo</releaseNotes>
+    <copyright>Copyright 2020</copyright>
+    <tags>Native Cpp UE4 Editor Demo</tags>
+    <dependencies>
+    </dependencies>
+        <!-- A readme.txt to display when the package is installed -->
+  </metadata>
+  <files>
+        <file src="**" target="" />
+  </files>
+</package>
