@@ -5,7 +5,7 @@
     <version>0.0.0.1</version>
     <authors>dorgon.chang</authors>
     <owners>dorgon.chang</owners>
-    <projectUrl>https://github.com/dorgonman/HorizonDialogueDemo</projectUrl>
+    <projectUrl>https://github.com/dorgonman/HorizonInteractDemo</projectUrl>
     <iconUrl>https://i.imgur.com/8dfwtEQ.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>HorizonDialogue Plugin Demo Project Editor dll, no source code, only for Win64 and mac editor</description>
