@@ -4,12 +4,6 @@
 #include "MyFunctionLibrary.h"
 
 // 	void SetVirtualCursorWidget(EMouseCursor::Type Cursor, class UUserWidget* Widget);
-// 		UGameViewportClient::AddSoftwareCursor(Entry.Key, Entry.Value);
-
+// 	UGameViewportClient::AddSoftwareCursor(Entry.Key, Entry.Value);
 //InputProcessorPtr = MakeShareable(new FAnalogCursor());
 //FSlateApplication::Get().RegisterInputPreProcessor(InputProcessorPtr);
-//FVector inputVector(0.1f);
-//FScopedMovementUpdate ScopedMovementUpdate(pOwnerCharacter->GetMovementComponent()->UpdatedComponent, EScopedUpdate::ImmediateUpdates, false);
-//ScopedMovementUpdate.ForceOverlapUpdate();
-//UCharacterMovementComponent
-//pOwnerCharacter->GetMovementComponent()->AddInputVector(inputVector);
