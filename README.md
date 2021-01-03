@@ -1,4 +1,4 @@
-[Marketplace](https://www.unrealengine.com/marketplace/en-US/horizon-ui-plugin) 
+[Marketplace](https://www.unrealengine.com/marketplace/en-US/horizon-interact) 
 
 public feed: nuget.org  
 
@@ -117,7 +117,7 @@ What does your plugin do/What is the intent of your plugin
 The intent of this plugin is to provide flexible callback functions that can integrate interact feature in games.  
 
 [DemoVideo](https://youtu.be/wdclGx1IIwQ)  
-[TutorialVideo](https://www.youtube.com/watch?v=hjI2RDx48yc&feature=youtu.be)
+[TutorialVideo](https://www.youtube.com/watch?v=l-WCsGpg_fo&feature=youtu.be)
 	
 -----------------------
 Contact and Support
