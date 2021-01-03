@@ -112,7 +112,7 @@ Documentation: https://github.com/dorgonman/HorizonInteractDemo
 
 Example Project: https://github.com/dorgonman/HorizonInteractDemo  
 
-The goal of this plugin is to provide a general Interact System that can be custotmized for different gameplay. You to interact with character or object using different  method, for example, limit the player can only interact with the object that player face or under the mouse curosor.
+The goal of this plugin is to provide a general Interact System that can be custotmized for different gameplay. You to interact with character or object using different  method, for example, limit the player can only interact with the object that player face or under the mouse cursor.
 
 
 -----------------------
