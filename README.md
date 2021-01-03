@@ -1,5 +1,7 @@
 [Marketplace](https://www.unrealengine.com/marketplace/en-US/horizon-interact) 
 
+[![Build Status](https://dev.azure.com/hsgame/UE4HorizonPlugin/_apis/build/status/HorizonInteract/HorizonInteractDemo-Shipping-CI?repoName=HorizonInteractDemo&branchName=main)](https://dev.azure.com/hsgame/UE4HorizonPlugin/_build/latest?definitionId=51&repoName=HorizonInteractDemo&branchName=main)
+
 public feed: nuget.org  
 
 [![nuget.org package in feed in ](https://img.shields.io/nuget/v/HorizonInteractDemo.svg)](https://www.nuget.org/packages/HorizonInteractDemo/)
