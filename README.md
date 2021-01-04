@@ -1,4 +1,4 @@
-[Marketplace](https://www.unrealengine.com/marketplace/en-US/horizon-interact) 
+[Marketplace](https://www.unrealengine.com/marketplace/en-US/product/horizon-interact-plugin) 
 
 [![Build Status](https://dev.azure.com/hsgame/UE4HorizonPlugin/_apis/build/status/HorizonInteract/HorizonInteractDemo-Shipping-CI?repoName=HorizonInteractDemo&branchName=main)](https://dev.azure.com/hsgame/UE4HorizonPlugin/_build/latest?definitionId=51&repoName=HorizonInteractDemo&branchName=main)
 
