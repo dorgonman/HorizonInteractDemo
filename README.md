@@ -9,7 +9,7 @@ public feed: nuget.org
 
 Note: 
 
-main branch may be unstable since it is in development, please switch to tags, for example: editor/4.26.0.1
+main branch may be unstable since it is in development, please switch to tags, for example: editor/4.27.0.1
 
 How to Run Demo Project before purchase:(Only for Win64 editor build, no source code)
 1. Double click install_game_package_from_nuget_org.cmd, and check if UE4Editor-*.dll are installed to Binaries\Win64 and Plugins\HorizonInteractDemo\Binaries\Win64\
@@ -18,7 +18,7 @@ How to Run Demo Project before purchase:(Only for Win64 editor build, no source 
   
 ----------------------------------------------
               HorizonInteract
-                 4.26.0
+                 4.27.0
          http://dorgon.horizon-studio.net
           	dorgonman@hotmail.com
 ----------------------------------------------
@@ -27,7 +27,7 @@ How to Run Demo Project before purchase:(Only for Win64 editor build, no source 
 System Requirements
 -----------------------
 
-Supported UnrealEngine version: 4.26
+Supported UnrealEngine version: 4.27
  
 
 -----------------------
@@ -135,6 +135,20 @@ email: dorgonman@hotmail.com
 -----------------------
  Version History
 -----------------------
+
+*4.27.0  
+
+* AB#2098 [New][HorizonInteractObjectComponent] Implement GetInteractors
+
+* AB#2098 [New][HorizonInteractObjectComponent] Add GetInteractors
+
+* AB#2058 [New][HorizonInteractDelegates] Fix Behavior of FHorizonInteractDelegates::OnInteractHintWidgetVisibilityEventNative
+
+* AB#2058 [New][HorizonInteractDelegates] Implement all Interactor and InteractObjectComponent callbacks
+
+* AB#1935 [New][InteractorComponent] More callbacks: OnInteractObjectStartedEvent, OnInteractObjectFinishedEvent, OnInteractObjectAbortedEvent
+
+
 
 *4.26.0  
 
