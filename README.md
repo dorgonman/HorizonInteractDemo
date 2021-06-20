@@ -148,6 +148,7 @@ email: dorgonman@hotmail.com
 
 * AB#1935 [New][InteractorComponent] More callbacks: OnInteractObjectStartedEvent, OnInteractObjectFinishedEvent, OnInteractObjectAbortedEvent
 
+* [Performance] Implement DECLARE_HORIZONINTERACT_QUICK_SCOPE_CYCLE_COUNTER
 
 
 *4.26.0  
