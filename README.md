@@ -150,6 +150,16 @@ email: dorgonman@hotmail.com
 
 * [Performance] Implement DECLARE_HORIZONINTERACT_QUICK_SCOPE_CYCLE_COUNTER
 
+* AB#2230 [BugFix] Blueprint CustomInteractObject can't FinishInteract second times
+
+* [New][Build] PublicDefinitions.Add("WITH_HORIZONINTERACT=1");
+
+* [Refactor][HorizonInteractorComponent] SelectorClass = UHorizonInteractObjectSelector_PreferNearest
+
+* [New][HorizonInteractorComponent] Implement IsInteractStarted
+
+* Refactor HORIZONINTERACT_STRINGIZE
+
 
 *4.26.0  
 
