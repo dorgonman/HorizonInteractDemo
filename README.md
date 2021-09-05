@@ -106,6 +106,56 @@ Currently this plugin implement following Selector:
   
 
 -----------------------
+User Guide: Initialize TriggerComponent and HintWidget
+-----------------------
+
+You should call InteractObjectComponent->Init(InteractObjectTriggerComponent, HintWidgetComponent) and setup callbacks in the BeginPlay of InteractObject/InteractCharacter. If your InteractHint is displaying on Player's HUD and don't want to display it  with each InteractObject using WidgetComponent, you may want to pass nullptr to HintWidgetComponent and set up HintWidget Display Logic in OnInteractHintWidgetVisibilityEvent callback.
+
+Currently this plugin implement Following InteractObject/InteractCharacter that implement default Init and Callbacks behavior for convenience:
+
+  ```
+  AHorizonInteractCharacter_SphereTrigger  
+  AHorizonInteractCharacter_BoxTrigger
+  AHorizonInteractCharacter_CapsuleTrigger
+  AHorizonInteractObject_SphereTrigger
+  AHorizonInteractObject_BoxTrigger
+  AHorizonInteractObject_CapsuleTrigger 
+  ```
+
+Usually you will want to initialize and setup callbacks using your own Actor or Character instead of inherited from thoses Actors.
+
+-----------------------
+User Guide: HintWidget
+-----------------------
+
+HorizonInteractorComponent will notify Visibility changes to previous and current HintWidget. We can setup our own HintWidget Display logic using OnInteractHintWidgetVisibilityEvent callback, ex: Run Show/Hide Widget Animation, Set Mesh Outline. Following ScreenShot demostrate how to customize Interact Hint when we inherited from AHorizonInteractCharacter:
+
+
+ ![OnInteractHintWidgetVisibility_Customize](./ScreenShot/HorizonInteract_ScreenShot_OnInteractHintWidgetVisibility_Customize.png)
+
+
+Note: ReturnNode should return true to override default behavior(It simply Show/Hide WidgetComponent) of AHorizonInteractObject/AHorizonInteractCharacter.
+
+
+-----------------------
+User Guide: Listen/Dedicated Server support
+-----------------------
+
+This plugin is designed to use with network game in mind, but it didn't worked out of box, since it is very difficult to handle all use case without knowing project design. 
+
+This plugin support network that rely havily on Reliable RPC. When Client call Interactor's InteractPressed/InteractReleased, it will send RPC to Server. By default bUseNetworkLocalPredition is enabled, which means client will call those function locally so it can minimize client delay cause by Replicated Variable from Server. 
+
+This plugin didn't handle any replication, which means you will need to enable replicate in those Actors/Component that the state may be modified in InteractSystem's callbacks.
+
+
+ ![Replication_Actor](./ScreenShot/HorizonInteract_ScreenShot_Replication_Actor.png) 
+ ![Replication_Component](./ScreenShot/HorizonInteract_ScreenShot_Replication_Component.png)
+
+You may also want to implment Variable replication RepNotify logics in your project in order to ensure Client's and Server's State is same.  
+
+ ![Replication_Variable](./ScreenShot/HorizonInteract_ScreenShot_Replication_Variable.png)
+
+-----------------------
 Technical Details
 -----------------------
 
