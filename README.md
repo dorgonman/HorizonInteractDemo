@@ -81,6 +81,30 @@ You should call FinishInteract when your interaction finished:
 ![OnInteractFinished](./ScreenShot/HorizonInteract_ScreenShot_InputAction_InteractObject2.png)
 
   
+
+-----------------------
+User Guide: Selector
+-----------------------
+
+In HorizonInteractorComponent, we can design selector class using Blueprint for determine which InteractObject we want to interact base on game design. It will detect which registered InteractObject we are currently interacting and notify OnInteractObjectChangedEvent callbacks when InteractObject changed. Register/Unregister Logic are managed by OnBeginOverlapTrigger/OnEndOverlapTrigger in InteractObjectComponent.
+
+![InteractorSelector](./ScreenShot/HorizonInteract_ScreenShot_InteractorSelector.png)
+
+Currently this plugin implement following Selector:
+
+1. HorizonInteractObjectSelector: It simply return first Regeisted InteractObject. 
+
+2. PreferNearest: It will try to sort and pick nearest InteractObject base on the distance to Interactor Object.
+
+3. PreferNearestWithSameDirection: Same as PreferNearest with additional rule to prefer select InteractObject with same direction of Interactor.
+
+4. PreferNearestOnlySameDirection: Same as PreferNearest with additional rule to only select InteractObject with same direction of Interactor.
+
+5. UnderCursor: Select InteractObject under player's cursor. You can check /Game/_HorizonInteractDemo/Blueprint/InteractObject/Selector/BP_InteractObjectSelector_UnderCursor to see how to customize UnderCursor Logic using Blueprint.
+ 
+ ![InteractorSelector_UnderCursorCustomize](./ScreenShot/HorizonInteract_ScreenShot_InteractorSelector_UnderCursorCustomize.png)
+  
+
 -----------------------
 Technical Details
 -----------------------
