@@ -18,7 +18,7 @@ How to Run Demo Project before purchase:(Only for Win64 editor build, no source 
   
 ----------------------------------------------
               HorizonInteract
-                 4.27.0
+                 5.0.0
          http://dorgon.horizon-studio.net
           	dorgonman@hotmail.com
 ----------------------------------------------
@@ -27,7 +27,7 @@ How to Run Demo Project before purchase:(Only for Win64 editor build, no source 
 System Requirements
 -----------------------
 
-Supported UnrealEngine version: 4.27
+Supported UnrealEngine version: 4.26-5.0
  
 
 -----------------------
@@ -209,6 +209,13 @@ email: dorgonman@hotmail.com
 -----------------------
  Version History
 -----------------------
+
+*5.0.0  
+
+* AB#2414 [New] StartInteract/FinishInteract with server RPC
+
+* AB#2339 [BugFix][Selector] PreferNearestOnlySameDirection should sort before pick
+
 
 *4.27.0  
 
