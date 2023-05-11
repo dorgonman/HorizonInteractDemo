@@ -9,7 +9,12 @@ public class HorizonInteractDemoEditorTarget : TargetRules
 	{
 		Type = TargetType.Editor;
 		DefaultBuildSettings = BuildSettingsVersion.V2;
-		IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_1;
+		IncludeOrderVersion = EngineIncludeOrderVersion.Latest;
 		ExtraModuleNames.AddRange( new string[] { "HorizonInteractDemo" } );
-	}
+        //{
+        //    bUsePCHFiles = false;
+        //    bUseSharedPCHs = false;
+        //    bUseUnityBuild = false;
+        //}
+    }
 }

@@ -1,6 +1,6 @@
 [Marketplace](https://www.unrealengine.com/marketplace/en-US/product/horizon-interact-plugin) 
 
-[![Build Status](https://dev.azure.com/hsgame/UE4HorizonPlugin/_apis/build/status/HorizonInteract/HorizonInteractDemo-Shipping-CI?repoName=HorizonInteractDemo&branchName=main)](https://dev.azure.com/hsgame/UE4HorizonPlugin/_build/latest?definitionId=51&repoName=HorizonInteractDemo&branchName=main)
+[![Build Status](https://dev.azure.com/hsgame/UEHorizonPlugin/_apis/build/status/HorizonInteract/HorizonInteractDemo-Shipping-CI?repoName=HorizonInteractDemo&branchName=main)](https://dev.azure.com/hsgame/UEHorizonPlugin/_build/latest?definitionId=51&repoName=HorizonInteractDemo&branchName=main)
 
 public feed: nuget.org  
 
@@ -18,7 +18,7 @@ How to Run Demo Project before purchase:(Only for Win64 editor build, no source 
   
 ----------------------------------------------
               HorizonInteract
-                 5.1.0
+                 5.2.0
          http://dorgon.horizon-studio.net
           	dorgonman@hotmail.com
 ----------------------------------------------
@@ -27,7 +27,7 @@ How to Run Demo Project before purchase:(Only for Win64 editor build, no source 
 System Requirements
 -----------------------
 
-Supported UnrealEngine version: 4.26-5.1
+Supported UnrealEngine version: 4.26-5.2
  
 
 -----------------------
@@ -188,7 +188,7 @@ Documentation: https://github.com/dorgonman/HorizonInteractDemo
 
 Example Project: https://github.com/dorgonman/HorizonInteractDemo  
 
-The goal of this plugin is to provide a general Interact System that can be custotmized for different gameplay. You can interact with character or object using different method, for example, limit the player can only interact with the object that player face or under the mouse cursor.
+The goal of this plugin is to provide a general Interact System that can be customized for different gameplay. You can interact with character or object using different method, for example, limit the player can only interact with the object that player face or under the mouse cursor.
 
 
 [DemoVideo](https://youtu.be/wdclGx1IIwQ)  
@@ -198,7 +198,7 @@ The goal of this plugin is to provide a general Interact System that can be cust
 What does your plugin do/What is the intent of your plugin
 -----------------------  
 
-The goal of this plugin is to provide a general Interact System that can be custotmized for different gameplay.
+The goal of this plugin is to provide a general Interact System that can be customized for different gameplay.
 
 -----------------------
 Contact and Support
@@ -209,6 +209,10 @@ email: dorgonman@hotmail.com
 -----------------------
  Version History
 -----------------------
+
+*5.2.0  
+
+    Update to 5.2.0
 
 *5.1.0  
 
