@@ -1,1 +1,1 @@
-{ "BuildConfig":"Development", "GameVersion":"5.2.0.42", "Revision":42, "BranchName":"dorgon/upgrade_5.2" }
+{ "BuildConfig":"Shipping", "GameVersion":"5.3.0.42", "Revision":42, "BranchName":"dorgon/upgrade/5.3" }
