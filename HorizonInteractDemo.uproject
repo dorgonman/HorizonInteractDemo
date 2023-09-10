@@ -18,6 +18,10 @@
 			"Name": "HorizonInteract",
 			"Enabled": true,
 			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/"
+		},
+		{
+			"Name": "XRBase",
+			"Enabled": true
 		}
 	]
 }
