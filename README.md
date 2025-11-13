@@ -27,7 +27,7 @@ How to Run Demo Project before purchase:(Only for Win64 editor build, no source 
 System Requirements
 -----------------------
 
-Supported UnrealEngine version: 4.26-5.6
+Supported UnrealEngine version: 4.26-5.7
  
 
 -----------------------
@@ -209,6 +209,10 @@ email: dorgonman@hotmail.com
 -----------------------
  Version History
 -----------------------
+
+*5.7.0
+
+	Update to 5.7.0
 
 *5.6.0
 
