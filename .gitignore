@@ -23,3 +23,5 @@ Releases
 /Build/Windows/FileOpenOrder/EditorOpenOrder.log
 /Build/Script/HorizonInteractDemo.Automation/*.props
 /.vsconfig
+/.kano/cache
+/_kano/backlog/_shared/logs/agent_tools/tool_invocations.jsonl
