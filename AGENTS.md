@@ -1,168 +1,126 @@
-# AGENTS.md - HorizonInteractDemo Development Guide
+# AGENTS.md — HorizonInteractDemo
 
-## Project Overview
-HorizonInteractDemo is an Unreal Engine plugin (v4.26-5.7) providing a flexible interaction system for game development. The project includes both the plugin source code and a demo project.
+Unreal Engine 5.7 plugin demo project. Build/test via `Build/Script/` local overrides and `Build/Base/Script/` shared scripts.
 
-**Key Paths:**
-- Plugin Source: `Plugins/HorizonInteract/Source/HorizonInteract/`
-- Demo Project: `Source/HorizonInteractDemo/`
-- Build Scripts: `Build/Script/HorizonInteractDemo.Automation/`
+## Quick Start
 
-## Build & Development Commands
-
-### Project Setup
-```bash
-# Generate Visual Studio project files
-./git_checkout_main.sh          # Checkout main branch with submodules
-./git_submodule_update.sh       # Update submodules
+From repo root (Git Bash on Windows):
+```sh
+./git_submodule_update.sh
+./git_checkout_main.sh
 ```
 
-### Building
-```bash
-# Build the project (requires Unreal Engine installed)
-# Use Unreal Automation Tool or Visual Studio
+## Build Commands
 
-# For Win64 Editor build
-Engine/Build/BatchFiles/Build.bat HorizonInteractDemoEditor Win64 Development
+Run from Git Bash on Windows unless noted otherwise.
 
-# For Shipping build
-Engine/Build/BatchFiles/Build.bat HorizonInteractDemo Win64 Shipping
+**Plugin (Shipping):**
+```sh
+./Build/Script/win64/plugin/shipping.sh
 ```
 
-### Running Tests
-```bash
-# Run automation tests in editor
-# Tests are located in: Plugins/HorizonInteract/Source/HorizonInteract/Private/Test/HorizonInteract.spec.cpp
-
-# Via Unreal Editor:
-# 1. Open project in editor
-# 2. Window > Developer Tools > Automation
-# 3. Search for "Plugin.HorizonInteract" tests
-# 4. Click "Start Tests"
-
-# Via command line:
-Engine/Build/BatchFiles/RunUAT.bat BuildPlugin -Plugin="Plugins/HorizonInteract/HorizonInteract.uplugin" -CreateSubFolder -TargetPlatforms=Win64
+**Standalone (Development):**
+```sh
+./Build/Base/Script/win64/standalone/development.sh
 ```
 
-### Running Single Test
-```bash
-# Run specific automation test via command line
-Engine/Build/BatchFiles/RunUAT.bat BuildCook -Project=HorizonInteractDemo.uproject -TargetPlatforms=Win64 -Automation
+## Test Commands
+
+**Run full test suite:**
+```sh
+./Build/Script/win64/editor/test.sh
 ```
 
-## Code Style Guidelines
+**Run single automation test:**
+```sh
+export EXTRA_PARAMETERS='-ExecCmds="Automation RunTests Plugin.HorizonInteract; Quit"'
+AUTOMATION_TEST_FILTER='Plugin.HorizonInteract' ./Build/Script/win64/editor/test.sh
+```
 
-### C++ Naming Conventions
-- **Classes**: PascalCase with prefix (A for Actors, U for Components/Objects)
-  - `AHorizonInteractObject`, `UHorizonInteractorComponent`
-- **Functions**: PascalCase
-  - `BeginPlay()`, `OnInteractStarted()`
-- **Variables**: PascalCase with prefix
-  - `bCanEverTick` (bool prefix 'b')
-  - `InInteractorController` (parameter prefix 'In')
-  - `pWidgetComponent` (pointer prefix 'p')
-- **Constants**: PascalCase with prefix
-  - `TEXT("SomeName")` for string literals
-- **Enums**: PascalCase with E prefix
-  - `EHorizonInteractObjectAbortReason`
+Available tests (from `Plugins/HorizonInteract/Source/HorizonInteract/Private/Test/`):
+- `Plugin.HorizonInteract`
 
-### File Organization
-- **Headers**: `Public/` directory with `.h` extension
-- **Implementation**: `Private/` directory with `.cpp` extension
-- **Modules**: Organized by feature (Component/, Selector/, etc.)
-- **Generated Code**: Include via `#include UE_INLINE_GENERATED_CPP_BY_NAME(ClassName)`
+## Code Style & Conventions
 
-### Formatting & Indentation
-- **Indent**: 4 spaces (configured in `.editorconfig`)
-- **Line Length**: Max 120 characters
-- **Braces**: Allman style (opening brace on new line)
-- **Charset**: UTF-8
+### Naming (Unreal Standard)
+- `U` prefix: UObject-derived classes
+- `A` prefix: AActor-derived classes
+- `S` prefix: Slate widgets
+- `F` prefix: structs
+- `E` prefix: enums
+- `T` prefix: template types
+- `b` prefix: bool variables (e.g., `bIsEnabled`)
 
-### Includes & Dependencies
-- **Order**: Generated includes last
-  - `#include "CoreMinimal.h"`
-  - `#include "GameFramework/Actor.h"`
-  - `#include "ClassName.generated.h"`
-- **Forward Declarations**: Use in headers to reduce dependencies
-  - `class UHorizonInteractObjectComponent;`
-- **Module Dependencies**: Defined in `.Build.cs` files
-  - Public: Core, Engine
-  - Private: CoreUObject, Slate, SlateCore, UMG
+### Includes & Headers
+- Use `#pragma once` in all headers
+- Include generated header **last**: `#include "<File>.generated.h"`
+- In `.cpp`: include matching header first, then local module headers, then engine headers
+- Prefer forward declarations in headers
 
-### Types & Declarations
-- **UCLASS()**: For Unreal classes with reflection
-- **UPROPERTY()**: For exposed properties with specifiers
-  - `VisibleAnywhere`, `BlueprintReadOnly`, `Category`
-- **UFUNCTION()**: For exposed functions
-  - `BlueprintNativeEvent`, `Category`
-- **TObjectPtr<>**: Smart pointer for UObject references
-- **Null Checks**: Always check before dereferencing
+### Types & Ownership
+- Prefer Unreal types: `int32`, `uint8`, `float`, `FString`, `FName`, `FText`, `FVector2D`
+- Use UE containers: `TArray`, `TMap`, `TOptional`
+- For UObjects:
+  - `TObjectPtr<T>` for owning UPROPERTY references (UE5)
+  - `TWeakObjectPtr<T>` for weak references
+  - `TSoftObjectPtr<T>` for soft asset references
 
-### Error Handling
-- **Assertions**: Use `check()` for critical errors
-- **Validation**: Use `if (Pointer)` before access
-- **Logging**: Use `UE_LOG()` with appropriate verbosity
-- **Return Values**: Use bool or void with side effects
+### Error Handling & Logging
+- Use UE assertion macros: `check`, `checkf` (fatal), `ensure`, `ensureMsgf` (non-fatal)
+- Plugin logging category: `LogHorizonInteract`
+- Convenience macros in `HorizonInteractPrivate.h`:
+  - `UE_HORIZONINTERACT_FATAL/ERROR/WARNING/DISPLAY/LOG/VERBOSE/VERY_VERBOSE`
 
-### Comments & Documentation
-- **File Header**: Include copyright, date, author, email
-  ```cpp
-  // Created by dorgon, All Rights Reserved.
-  // Date of intended publication: 2021/01/09
-  // email: dorgonman@hotmail.com
-  ```
-- **Function Comments**: Describe purpose and parameters
-- **Inline Comments**: Explain non-obvious logic
-- **Category Tags**: Use `Category = "HorizonPlugin|Interact"` in UFUNCTION/UPROPERTY
+### Threading & Constructor Safety
+- Avoid constructor-time asset loading
+- UWidget construction can happen off-game-thread in UE5
+- Defer asset loads to safe runtime points (e.g., NativeConstruct, NativeOnInitialized)
 
-### Lambda & Callbacks
-- **Weak Lambdas**: Use `AddWeakLambda()` to avoid circular references
-  ```cpp
-  InteractObjectComponent->OnInteractStartedEventNative.AddWeakLambda(this, 
-    [this](AController* InInteractorController) { OnInteractStarted(InInteractorController); });
-  ```
-- **Delegate Binding**: Prefer weak bindings for actor callbacks
-
-### Performance Considerations
-- **Tick**: Disable `PrimaryActorTick.bCanEverTick` if not needed
-- **Scope Counters**: Use `DECLARE_HORIZONINTERACT_QUICK_SCOPE_CYCLE_COUNTER` for profiling
-- **Network**: Use `bUseNetworkLocalPrediction` for client-side prediction
+### Formatting
+- **Indentation:** 4 spaces (UTF-8, max line 120 chars)
+- **YAML files:** 2 spaces
+- See `.editorconfig` for baseline
 
 ## Module Structure
 
-### HorizonInteract Plugin Module
-- **Type**: Runtime
-- **Location**: `Plugins/HorizonInteract/Source/HorizonInteract/`
-- **Public API**: Exposed via `HORIZONINTERACT_API` macro
-- **Build Definition**: `WITH_HORIZONINTERACT=1`
+**HorizonInteract (Runtime)**
+- Location: `Plugins/HorizonInteract/Source/HorizonInteract/`
+- Public headers: `Public/`
+- Private implementation: `Private/`
+- Logging/macros: `Private/HorizonInteractPrivate.h`
 
-### Key Classes
+**Key Components:**
 - `AHorizonInteractObject`: Base actor for interactive objects
 - `AHorizonInteractCharacter`: Base character with interaction support
 - `UHorizonInteractorComponent`: Component for interacting with objects
 - `UHorizonInteractObjectComponent`: Component for interactive objects
 - `UHorizonInteractObjectSelector`: Base class for selection logic
 
-## Testing
-- **Framework**: Unreal Automation Tests (FAutomationTestBase)
-- **Location**: `Private/Test/HorizonInteract.spec.cpp`
-- **Conditional**: Wrapped in `#if WITH_DEV_AUTOMATION_TESTS`
-- **Version Compatibility**: Handle UE version differences with preprocessor checks
+## Automation Tests
 
-## CI/CD Pipeline
-- **Platform**: Azure Pipelines (`.azure-pipelines/azure-pipelines.yml`)
-- **Triggers**: Changes to Source/, Plugins/, Content/, or .uproject
-- **Targets**: Win64, Android, Mac
-- **Artifact**: NuGet package published to nuget.org
+Tests are guarded by `WITH_DEV_AUTOMATION_TESTS`. When adding tests:
+1. Follow existing pattern in `Plugins/HorizonInteract/Source/HorizonInteract/Private/Test/*.cpp`
+2. Use `FAutomationTestBase` or `FAutomationSpecBase`
+3. Register with Unreal automation macros
+4. Name format: `Plugin.Category.PluginName.TestName`
 
-## Version Management
-- **Current**: 5.7.0 (version 40)
-- **Supported UE**: 4.26 - 5.7
-- **Versioning**: Aligned with Unreal Engine versions
-- **Tags**: Use format `editor/X.Y.Z.N` for releases
+## CI/CD
+
+- Azure Pipelines: `.azure-pipelines/`
+- Uses EpicGames templates (`verify-plugin-build.yml@templates`)
+- UAT invoked via `RunUAT.*` in `Build/Base/Script/common.sh`
 
 ## Important Notes
-- Main branch may be unstable; use tagged releases for production
-- Network replication not handled by plugin; implement in project
-- Plugin uses Reliable RPC for network communication
-- Enable replication on actors/components modified by interact callbacks
+
+- Prefer `Build/Script/` overrides first, then `Build/Base/Script/` shared scripts
+- Shared scripts contain MSYS/Git-Bash conditionals (`OSTYPE == msys`)
+- On Windows, run scripts from **Git Bash**
+- No dedicated lint command; use IDE tooling for formatting
+- No Cursor/Copilot rules found (`.cursorrules`, `.github/copilot-instructions.md`)
+
+## Useful Paths
+
+- Plugin descriptor: `Plugins/HorizonInteract/HorizonInteract.uplugin`
+- Tests: `Plugins/HorizonInteract/Source/HorizonInteract/Private/`
+- Build scripts: `Build/Script/` (overrides) and `Build/Base/Script/` (shared)
+- CI config: `.azure-pipelines/`
