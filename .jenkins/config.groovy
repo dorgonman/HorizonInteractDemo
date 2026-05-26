@@ -125,6 +125,9 @@ def projectConfig() {
         // === Consumer metadata ===
         projectName:        'HorizonInteractDemo',
         uprojectPath:       'HorizonInteractDemo.uproject',
+
+        // === Build timeout ===
+        build_timeout_hours: 48,
     ]
 }
 
