@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en"><head><title>readme</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM Plex Mono&amp;family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;display=swap"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta property="og:title" content="readme"/><meta property="og:description" content="Marketplace public feed: nuget.org Note: main branch may be unstable since it is in development, please switch to tags, for example: editor/4.27.0.1 How to Run Demo Project before ..."/><meta property="og:image" content="https://dorgonman.github.io/HorizonUIPluginDemo/static/og-image.png"/><meta property="og:width" content="1200"/><meta property="og:height" content="675"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="Marketplace public feed: nuget.org Note: main branch may be unstable since it is in development, please switch to tags, for example: editor/4.27.0.1 How to Run Demo Project before ..."/><meta name="generator" content="Quartz"/><link href="./index.css" rel="stylesheet" type="text/css" spa-preserve/><script src="./prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script></head><body data-slug="readme"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">HorizonUIPluginDemo Release</a></h2><div class="spacer mobile-only"></div><div class="search"><button class="search-button" id="search-button"><p>Search</p><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></button><div id="search-container"><div id="search-space"><input autocomplete="off" id="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/><div id="search-layout" data-preview="true"></div></div></div></div><button class="darkmode" id="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="Dark mode"><title>Dark mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="Light mode"><title>Light mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button><div class="explorer desktop-only"><button type="button" id="explorer" data-behavior="collapse" data-collapsed="collapsed" data-savestate="true" data-tree="[]" aria-controls="explorer-content" aria-expanded="false"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-content"><ul class="overflow" id="explorer-ul"><li><div class="folder-outer open"><ul style="padding-left:0;" class="content" data-folderul><li><div class="folder-outer "><ul style="padding-left:0;" class="content" data-folderul></ul></div></li><li><a href="./testing" data-for="testing">Automation Test Results</a></li><li><a href="./coverage" data-for="coverage">Coverage Summary</a></li><li><a href="./project-readme" data-for="project-readme">project-readme</a></li><li><a href="./readme" data-for="readme">readme</a></li></ul></div></li><li id="explorer-end"></li></ul></div></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>readme</a></div></nav><h1 class="article-title">readme</h1><p show-comma="true" class="content-meta"><span>Jun 05, 2026</span><span>5 min read</span></p></div></div><article class="popover-hint"><p><a href="https://www.unrealengine.com/marketplace/en-US/product/horizon-interact-plugin" class="external">Marketplace<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><a href="https://dev.azure.com/hsgame/UEHorizonPlugin/_build/latest?definitionId=51&amp;repoName=HorizonInteractDemo&amp;branchName=main" class="external"><img src="https://dev.azure.com/hsgame/UEHorizonPlugin/_apis/build/status/HorizonInteract/HorizonInteractDemo-Shipping-CI?repoName=HorizonInteractDemo&amp;branchName=main" alt="Build Status"/><svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>public feed: nuget.org</p>
+<p><a href="https://www.nuget.org/packages/HorizonInteractDemo/" class="external"><img src="https://img.shields.io/nuget/v/HorizonInteractDemo.svg" alt="nuget.org package in feed in "/><svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>Note:</p>
+<p>main branch may be unstable since it is in development, please switch to tags, for example: editor/4.27.0.1</p>
+<p>How to Run Demo Project before purchase:(Only for Win64 editor build, no source code)</p>
+<ol>
+<li>
+<p>Double click install_game_package_from_nuget_org.cmd, and check if UE4Editor-*.dll are installed to Binaries\Win64 and Plugins\HorizonInteractDemo\Binaries\Win64\</p>
+</li>
+<li>
+<p>Double click HorizonInteractDemo.uproject</p>
+</li>
+</ol>
+<hr/>
+<pre><code>          HorizonInteract
+             5.5.0
+     http://dorgon.horizon-studio.net
+      	dorgonman@hotmail.com
+</code></pre>
+<hr/>
+<hr/>
+<h2 id="system-requirements">System Requirements<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#system-requirements" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Supported UnrealEngine version: 4.26-5.7</p>
+<hr/>
+<h2 id="installation-guide">Installation Guide<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#installation-guide" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>If you want to use plugins in C++, you should add associated module to your project’s
+YOUR_PROJECT.Build.cs:
+PublicDependencyModuleNames.AddRange(new string[] { “HorizonInteract”});</p>
+<hr/>
+<h2 id="user-guide-quick-start">User Guide: Quick Start<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#user-guide-quick-start" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ol>
+<li>Create Blueprint class that inherited from HorizonInteractObject_SphereTrigger and setup HintWidgetComponent.</li>
+</ol>
+<p><img src="./ScreenShot/HorizonInteract_ScreenShot_CreateObject.png" alt="Create Interact Object"/></p>
+<ol start="2">
+<li>Add HorizonInteractorComponent into Default Pawn Classe.</li>
+</ol>
+<p><img src="./ScreenShot/HorizonInteract_ScreenShot_AddInteractorIntoPawn.png" alt="Add HorizonInteractorComponent"/></p>
+<ol start="3">
+<li>Setup Collision and Collision Profile for Interactor and InteractObject.</li>
+</ol>
+<p><img src="./ScreenShot/HorizonInteract_ScreenShot_CollisionProfile_Overview.png" alt="CollisionProfile Interactor"/></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th style="text-align:center;">Interactor</th><th style="text-align:center;">InteractObject</th></tr></thead><tbody><tr><td style="text-align:center;"><img src="./ScreenShot/HorizonInteract_ScreenShot_CollisionProfile_Interactor.png" alt="CollisionProfile Interactor"/></td><td style="text-align:center;"><img src="./ScreenShot/HorizonInteract_ScreenShot_CollisionProfile_InteractObject.png" alt="CollisionProfile InteractObject"/></td></tr><tr><td style="text-align:center;"><img src="./ScreenShot/HorizonInteract_ScreenShot_Collision_Interactor.png" alt="CollisionProfile Interactor"/></td><td style="text-align:center;"><img src="./ScreenShot/HorizonInteract_ScreenShot_Collision_InteractObject.png" alt="CollisionProfile InteractObject"/></td></tr></tbody></table></div>
+<ol start="4">
+<li>InputAction Setup: Project Setting</li>
+</ol>
+<p>Open Project Setting and Add InputAction Interact</p>
+<p><img src="./ScreenShot/HorizonInteract_ScreenShot_InputAction_Interactor1.png" alt="InputAction"/></p>
+<ol start="5">
+<li>InputAction Setup: Call Input Action in Controller Pawn.</li>
+</ol>
+<p><img src="./ScreenShot/HorizonInteract_ScreenShot_InputAction_Interactor2.png" alt="InputAction"/></p>
+<ol start="6">
+<li>InteractObject: Override OnInteractStarted</li>
+</ol>
+<p><img src="./ScreenShot/HorizonInteract_ScreenShot_InputAction_InteractObject1.png" alt="OnInteractStarted"/></p>
+<p>You should call FinishInteract when your interaction finished:</p>
+<p><img src="./ScreenShot/HorizonInteract_ScreenShot_InputAction_InteractObject2.png" alt="OnInteractFinished"/></p>
+<hr/>
+<h2 id="user-guide-selector">User Guide: Selector<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#user-guide-selector" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>In HorizonInteractorComponent, we can design selector class using Blueprint for determine which InteractObject we want to interact base on game design. It will detect which registered InteractObject we are currently interacting and notify OnInteractObjectChangedEvent callbacks when InteractObject changed. Register/Unregister Logic are managed by OnBeginOverlapTrigger/OnEndOverlapTrigger in InteractObjectComponent.</p>
+<p><img src="./ScreenShot/HorizonInteract_ScreenShot_InteractorSelector.png" alt="InteractorSelector"/></p>
+<p>Currently this plugin implement following Selector:</p>
+<ol>
+<li>
+<p>HorizonInteractObjectSelector: It simply return first Regeisted InteractObject.</p>
+</li>
+<li>
+<p>PreferNearest: It will try to sort and pick nearest InteractObject base on the distance to Interactor Object.</p>
+</li>
+<li>
+<p>PreferNearestWithSameDirection: Same as PreferNearest with additional rule to prefer select InteractObject with same direction of Interactor.</p>
+</li>
+<li>
+<p>PreferNearestOnlySameDirection: Same as PreferNearest with additional rule to only select InteractObject with same direction of Interactor.</p>
+</li>
+<li>
+<p>UnderCursor: Select InteractObject under player’s cursor. You can check /Game/_HorizonInteractDemo/Blueprint/InteractObject/Selector/BP_InteractObjectSelector_UnderCursor to see how to customize UnderCursor Logic using Blueprint.</p>
+</li>
+</ol>
+<p><img src="./ScreenShot/HorizonInteract_ScreenShot_InteractorSelector_UnderCursorCustomize.png" alt="InteractorSelector_UnderCursorCustomize"/></p>
+<hr/>
+<h2 id="user-guide-initialize-triggercomponent-and-hintwidget">User Guide: Initialize TriggerComponent and HintWidget<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#user-guide-initialize-triggercomponent-and-hintwidget" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>You should call InteractObjectComponent<span>→</span>Init(InteractObjectTriggerComponent, HintWidgetComponent) and setup callbacks in the BeginPlay of InteractObject/InteractCharacter. If your InteractHint is displaying on Player’s HUD and don’t want to display it  with each InteractObject using WidgetComponent, you may want to pass nullptr to HintWidgetComponent and set up HintWidget Display Logic in OnInteractHintWidgetVisibilityEvent callback.</p>
+<p>Currently this plugin implement Following InteractObject/InteractCharacter that implement default Init and Callbacks behavior for convenience:</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="text" data-theme="github-light github-dark"><code data-language="text" data-theme="github-light github-dark" style="display:grid;"><span data-line><span>AHorizonInteractCharacter_SphereTrigger  </span></span>
+<span data-line><span>AHorizonInteractCharacter_BoxTrigger</span></span>
+<span data-line><span>AHorizonInteractCharacter_CapsuleTrigger</span></span>
+<span data-line><span>AHorizonInteractObject_SphereTrigger</span></span>
+<span data-line><span>AHorizonInteractObject_BoxTrigger</span></span>
+<span data-line><span>AHorizonInteractObject_CapsuleTrigger </span></span></code></pre></figure>
+<p>Usually you will want to initialize and setup callbacks using your own Actor or Character instead of inherited from thoses Actors.</p>
+<hr/>
+<h2 id="user-guide-hintwidget">User Guide: HintWidget<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#user-guide-hintwidget" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>HorizonInteractorComponent will notify Visibility changes to previous and current HintWidget. We can setup our own HintWidget Display logic using OnInteractHintWidgetVisibilityEvent callback, ex: Run Show/Hide Widget Animation, Set Mesh Outline. Following ScreenShot demostrate how to customize Interact Hint when we inherited from AHorizonInteractCharacter:</p>
+<p><img src="./ScreenShot/HorizonInteract_ScreenShot_OnInteractHintWidgetVisibility_Customize.png" alt="OnInteractHintWidgetVisibility_Customize"/></p>
+<p>Note: ReturnNode should return true to override default behavior(It simply Show/Hide WidgetComponent) of AHorizonInteractObject/AHorizonInteractCharacter.</p>
+<hr/>
+<h2 id="user-guide-listendedicated-server-support">User Guide: Listen/Dedicated Server support<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#user-guide-listendedicated-server-support" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>This plugin is designed to use with network game in mind, but it didn’t worked out of box, since it is very difficult to handle all use case without knowing project design.</p>
+<p>This plugin support network that rely havily on Reliable RPC. When Client call Interactor’s InteractPressed/InteractReleased, it will send RPC to Server. By default bUseNetworkLocalPredition is enabled, which means client will call those function locally so it can minimize client delay cause by Replicated Variable from Server.</p>
+<p>This plugin didn’t handle any replication, which means you will need to enable replicate in those Actors/Component that the state may be modified in InteractSystem’s callbacks.</p>
+<p><img src="./ScreenShot/HorizonInteract_ScreenShot_Replication_Actor.png" alt="Replication_Actor"/>
+<img src="./ScreenShot/HorizonInteract_ScreenShot_Replication_Component.png" alt="Replication_Component"/></p>
+<p>You may also want to implment Variable replication RepNotify logics in your project in order to ensure Client’s and Server’s State is same.</p>
+<p><img src="./ScreenShot/HorizonInteract_ScreenShot_Replication_Variable.png" alt="Replication_Variable"/></p>
+<hr/>
+<h2 id="technical-details">Technical Details<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#technical-details" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Features:</p>
+<ol>
+<li>
+<p>AHorizonInteractCharacter and AHorizonInteractObject support SphereTrigger, BoxTrigger and CapsuleTrigger for interaction.</p>
+</li>
+<li>
+<p>Flexible callbacks for customization: OnInteractStarted, OnInteractTickStarted, OnInteractTick, OnInteractFinished, OnInteractAborted and OnInteractHintWidgetVisibility.</p>
+</li>
+<li>
+<p>UHorizonInteractorComponent support InteractPressed and InteractReleased Server RPC with network prediction.</p>
+</li>
+<li>
+<p>InteractObject support InteractStartDelay, ex: hold down the button for 2 seconds to open the door.</p>
+</li>
+<li>
+<p>Use UHorizonInteractObjectSelector to select which InteractObject that Interactor want to interact, current selector implemented in plugin: PreferNearest, PreferNearestWithSameDirection, PreferNearestOnlySameDirection and UnderCursor.</p>
+</li>
+</ol>
+<p>Code Modules:</p>
+<p>HorizonInteract (Runtime)</p>
+<p>Network Replicated: False</p>
+<p>Supported Development Platforms: Win64, Mac, Linux</p>
+<p>Supported Target Build Platforms: All Platforms</p>
+<p>Tested Platform: Win64</p>
+<p>Documentation: <a href="https://github.com/dorgonman/HorizonInteractDemo" class="external">https://github.com/dorgonman/HorizonInteractDemo<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>Example Project: <a href="https://github.com/dorgonman/HorizonInteractDemo" class="external">https://github.com/dorgonman/HorizonInteractDemo<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>The goal of this plugin is to provide a general Interact System that can be customized for different gameplay. You can interact with character or object using different method, for example, limit the player can only interact with the object that player face or under the mouse cursor.</p>
+<p><a href="https://youtu.be/wdclGx1IIwQ" class="external">DemoVideo<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+<a href="https://www.youtube.com/watch?v=l-WCsGpg_fo&amp;feature=youtu.be" class="external">TutorialVideo<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<hr/>
+<h2 id="what-does-your-plugin-dowhat-is-the-intent-of-your-plugin">What does your plugin do/What is the intent of your plugin<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#what-does-your-plugin-dowhat-is-the-intent-of-your-plugin" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>The goal of this plugin is to provide a general Interact System that can be customized for different gameplay.</p>
+<hr/>
+<h2 id="contact-and-support">Contact and Support<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#contact-and-support" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>email: <a href="mailto:dorgonman@hotmail.com" class="external">dorgonman@hotmail.com<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<hr/>
+<h2 id="version-history">Version History<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#version-history" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>*5.7.0</p>
+<pre><code>Update to 5.7.0
+</code></pre>
+<p>*5.6.0</p>
+<pre><code>Update to 5.6.0
+</code></pre>
+<p>*5.5.0</p>
+<pre><code>Update to 5.5.0
+</code></pre>
+<p>*5.4.0</p>
+<pre><code>Update to 5.4.0
+</code></pre>
+<p>*5.2.0</p>
+<pre><code>Update to 5.2.0
+</code></pre>
+<p>*5.1.0</p>
+<pre><code>Update to 5.1.0 and some minor refactor
+</code></pre>
+<p>*5.0.0</p>
+<ul>
+<li>
+<p>AB#2414 [New] StartInteract/FinishInteract with server RPC</p>
+</li>
+<li>
+<p>AB#2339 [BugFix][Selector] PreferNearestOnlySameDirection should sort before pick</p>
+</li>
+</ul>
+<p>*4.27.0</p>
+<ul>
+<li>
+<p>AB#2098 [New][HorizonInteractObjectComponent] Implement GetInteractors</p>
+</li>
+<li>
+<p>AB#2098 [New][HorizonInteractObjectComponent] Add GetInteractors</p>
+</li>
+<li>
+<p>AB#2058 [New][HorizonInteractDelegates] Fix Behavior of FHorizonInteractDelegates::OnInteractHintWidgetVisibilityEventNative</p>
+</li>
+<li>
+<p>AB#2058 [New][HorizonInteractDelegates] Implement all Interactor and InteractObjectComponent callbacks</p>
+</li>
+<li>
+<p>AB#1935 [New][InteractorComponent] More callbacks: OnInteractObjectStartedEvent, OnInteractObjectFinishedEvent, OnInteractObjectAbortedEvent</p>
+</li>
+<li>
+<p>[Performance] Implement DECLARE_HORIZONINTERACT_QUICK_SCOPE_CYCLE_COUNTER</p>
+</li>
+<li>
+<p>AB#2230 [BugFix] Blueprint CustomInteractObject can’t FinishInteract second times</p>
+</li>
+<li>
+<p>[New][Build] PublicDefinitions.Add(“WITH_HORIZONINTERACT=1”);</p>
+</li>
+<li>
+<p>[Refactor][HorizonInteractorComponent] SelectorClass = UHorizonInteractObjectSelector_PreferNearest</p>
+</li>
+<li>
+<p>[New][HorizonInteractorComponent] Implement IsInteractStarted</p>
+</li>
+<li>
+<p>Refactor HORIZONINTERACT_STRINGIZE</p>
+</li>
+</ul>
+<p>*4.26.0</p>
+<pre><code>    NEW: First Version including core features.
+</code></pre></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div id="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false}"></div><button id="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div id="global-graph-outer"><div id="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" id="toc" class aria-controls="toc-content" aria-expanded="true"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="toc-content" class><ul class="overflow"><li class="depth-0"><a href="#system-requirements" data-for="system-requirements">System Requirements</a></li><li class="depth-0"><a href="#installation-guide" data-for="installation-guide">Installation Guide</a></li><li class="depth-0"><a href="#user-guide-quick-start" data-for="user-guide-quick-start">User Guide: Quick Start</a></li><li class="depth-0"><a href="#user-guide-selector" data-for="user-guide-selector">User Guide: Selector</a></li><li class="depth-0"><a href="#user-guide-initialize-triggercomponent-and-hintwidget" data-for="user-guide-initialize-triggercomponent-and-hintwidget">User Guide: Initialize TriggerComponent and HintWidget</a></li><li class="depth-0"><a href="#user-guide-hintwidget" data-for="user-guide-hintwidget">User Guide: HintWidget</a></li><li class="depth-0"><a href="#user-guide-listendedicated-server-support" data-for="user-guide-listendedicated-server-support">User Guide: Listen/Dedicated Server support</a></li><li class="depth-0"><a href="#technical-details" data-for="technical-details">Technical Details</a></li><li class="depth-0"><a href="#what-does-your-plugin-dowhat-is-the-intent-of-your-plugin" data-for="what-does-your-plugin-dowhat-is-the-intent-of-your-plugin">What does your plugin do/What is the intent of your plugin</a></li><li class="depth-0"><a href="#contact-and-support" data-for="contact-and-support">Contact and Support</a></li><li class="depth-0"><a href="#version-history" data-for="version-history">Version History</a></li></ul></div></div><div class="backlinks"><h3>Backlinks</h3><ul class="overflow"><li>No backlinks found</li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.4.0</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript">function c(){let t=this.parentElement;t.classList.toggle("is-collapsed");let l=t.classList.contains("is-collapsed")?this.scrollHeight:t.scrollHeight;t.style.maxHeight=l+"px";let o=t,e=t.parentElement;for(;e;){if(!e.classList.contains("callout"))return;let n=e.classList.contains("is-collapsed")?e.scrollHeight:e.scrollHeight+o.scrollHeight;e.style.maxHeight=n+"px",o=e,e=e.parentElement}}function i(){let t=document.getElementsByClassName("callout is-collapsible");for(let s of t){let l=s.firstElementChild;if(l){l.addEventListener("click",c),window.addCleanup(()=>l.removeEventListener("click",c));let e=s.classList.contains("is-collapsed")?l.scrollHeight:s.scrollHeight;s.style.maxHeight=e+"px"}}}document.addEventListener("nav",i);window.addEventListener("resize",i);
+</script><script type="module">
+          let mermaidImport = undefined
+          document.addEventListener('nav', async () => {
+            if (document.querySelector("code.mermaid")) {
+              mermaidImport ||= await import('https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.7.0/mermaid.esm.min.mjs')
+              const mermaid = mermaidImport.default
+              const darkMode = document.documentElement.getAttribute('saved-theme') === 'dark'
+              mermaid.initialize({
+                startOnLoad: false,
+                securityLevel: 'loose',
+                theme: darkMode ? 'dark' : 'default'
+              })
+
+              await mermaid.run({
+                querySelector: '.mermaid'
+              })
+            }
+          });
+          </script><script src="./postscript.js" type="module"></script></html>
