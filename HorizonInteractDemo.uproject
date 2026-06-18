@@ -21,6 +21,10 @@
 			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/"
 		},
 		{
+			"Name": "Fab",
+			"Enabled": false
+		},
+		{
 			"Name": "XRBase",
 			"Enabled": true
 		}
